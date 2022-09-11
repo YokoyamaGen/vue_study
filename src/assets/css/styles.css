@@ -100,8 +100,8 @@ main {
   display: inline-block;
   flex-direction: column;
   align-items: flex-start;
-  min-width: 290px;
-  width: 290px;
+  min-width: 410px;
+    width: 410px;
   background-color: #e0e0e0;
   border-radius: 8px;
   padding: 15px;
@@ -147,7 +147,7 @@ main {
   padding: 30px 15px 40px;
   background-color: #fff;
   border-radius: 8px;
-  width: 260px;
+    width: 380px;
   cursor: pointer;
 }
 
@@ -173,4 +173,19 @@ main {
 
 .active .text-input {
   background-color: #fff;
+}
+.addtext {
+  margin-top: 40px;
+}
+
+.text {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  position: relative;
+  display: flex;
+  padding: 30px 15px 40px;
+  background-color: #fff;
+  border-radius: 8px;
+  width: 160px;
+  cursor: pointer;
 }

@@ -3,13 +3,26 @@
     <button class="close-button" @click="removeCardFromList">×</button>
     <div class="body">
       {{ body }}
+      <text-body :text="text" :listIndex="listIndex" :cardIndex="cardIndex" />
     </div>
+    <text-add :listIndex="listIndex" :cardIndex="cardIndex" />
   </div>
 </template>
 <script>
+import TextAdd from "./TextAdd";
+import TextBody from "./Text";
+
 export default {
+  components: {
+    TextAdd,
+    TextBody,
+  },
   props: {
     body: {
+      type: String,
+      required: true,
+    },
+    text: {
       type: String,
       required: true,
     },

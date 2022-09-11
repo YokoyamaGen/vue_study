@@ -12,7 +12,10 @@ const store = new Vuex.Store({
       : [
           {
             title: "Backlog",
-            cards: [{ body: "English" }, { body: "Mathematics" }],
+            cards: [
+              { body: "English", text: "foregin language" },
+              { body: "Mathematics", text: "" },
+            ],
           },
           {
             title: "Todo",
@@ -40,6 +43,13 @@ const store = new Vuex.Store({
     updateList(state, payload) {
       state.lists = payload.lists;
     },
+    addTextToList(state, payload) {
+      state.lists[payload.listIndex].cards[payload.cardIndex]["text"] =
+        payload.text;
+    },
+    removeTextFromList(state, payload) {
+      state.lists[payload.listIndex].cards[payload.cardIndex]["text"] = "";
+    },
   },
   actions: {
     addlist(context, payload) {
@@ -56,6 +66,12 @@ const store = new Vuex.Store({
     },
     updateList(context, payload) {
       context.commit("updateList", payload);
+    },
+    addTextToList(context, payload) {
+      context.commit("addTextToList", payload);
+    },
+    removeTextFromList(context, payload) {
+      context.commit("removeTextFromList", payload);
     },
   },
   getters: {

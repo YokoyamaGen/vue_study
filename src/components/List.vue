@@ -9,6 +9,7 @@
       <card
         v-for="(item, index) in cards"
         :body="item.body"
+        :text="item.text"
         :key="item.id"
         :cardIndex="index"
         :listIndex="listIndex"
